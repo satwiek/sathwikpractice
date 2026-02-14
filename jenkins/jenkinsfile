@@ -1,0 +1,34 @@
+pipeline {
+    agent any
+    
+    stages{
+        stage("hostname"){
+            steps{
+                sh 'hostname'
+            }
+        }
+        stage('server date'){
+            steps{
+                sh 'date'
+            }
+        }
+        stage('cpu details'){
+            steps{
+                sh 'lscpu'
+            }
+        }
+
+        stage('memory usage'){
+            steps{
+                sh 'free -h'
+            }
+        }
+
+        stage('disk space'){
+            steps{
+                sh 'df -kh'
+            }
+        }
+    }
+
+}
