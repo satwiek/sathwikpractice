@@ -24,7 +24,7 @@ pipeline {
             }
         }
 
-        stage('disk space'){
+        stage('disk space details'){
             steps{
                 sh 'df -kh'
             }
